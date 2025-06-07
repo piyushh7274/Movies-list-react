@@ -1,0 +1,85 @@
+.movie-card {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-poster {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Slightly taller to accommodate poster ratio */
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will crop slightly but looks much better */
+    object-position: center top; /* Focus on the top part of the poster */
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    /* Initially hidden, shows on hover */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+    opacity: 1;
+}
+
+.fav-btn {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fav-btn:hover {
+    background: rgba(255, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.fav-btn.favorited {
+    background: rgba(255, 0, 0, 0.8);
+    color: #ff6b6b;
+}
+
+.movie-info {
+    padding: 12px;
+    color: white;
+}
+
+.movie-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.movie-info p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
