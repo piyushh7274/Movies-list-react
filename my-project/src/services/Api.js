@@ -41,4 +41,4 @@ export const searchMovies = async (query) => {
         console.error("Error in searchMovies:", error);
         throw error;
     }
-}
+}err
